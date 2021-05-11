@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_provider/src/models/category_model.dart';
 import 'package:news_provider/src/models/news_models.dart';
 import 'package:http/http.dart' as http;
 
@@ -8,6 +9,10 @@ final _APIKEY = 'a62b7f1ebaa041ada02cd5f383a9156c';
 
 class NewsServices with ChangeNotifier {
   List<Article> headlines = [];
+  
+  List<Category> categories = [
+    Category(icon, name)
+  ]
 
   NewsServices() {
     this.getTopHeadlines();
