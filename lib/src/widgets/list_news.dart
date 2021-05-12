@@ -108,7 +108,9 @@ class _CartImage extends StatelessWidget {
                     placeholder: AssetImage('assets/img/giphy.gif'),
                     image: NetworkImage(news.urlToImage),
                   )
-                : Image(image: AssetImage('assets/img/no-image.png'))),
+                : Image(
+                    image: AssetImage('assets/img/no-image.png'),
+                  )),
       ),
     );
   }
@@ -131,7 +133,6 @@ class _CartBody extends StatelessWidget {
 
 ///==============================================================================================///
 class _Cardbuttons extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -139,15 +140,17 @@ class _Cardbuttons extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           RawMaterialButton(
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            onPressed: () {},
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             fillColor: myTheme.accentColor,
             child: Icon(Icons.star_border),
           ),
           SizedBox(width: 10),
           RawMaterialButton(
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            onPressed: () {},
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             fillColor: Colors.blue,
             child: Icon(Icons.more),
           ),
